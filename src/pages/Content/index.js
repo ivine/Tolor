@@ -1,6 +1,11 @@
-import { printLine } from './modules/print';
 
-console.log('Content script works!');
-console.log('Must reload extension for modifications to take effect.');
+import React from 'react';
+import { render } from 'react-dom';
 
-printLine("Using the 'printLine' function from the Print Module");
+import Content from './Content.jsx';
+import './Content.css';
+
+render(
+  <Content />,
+  document.body.appendChild(document.createElement("DIV"))
+)
